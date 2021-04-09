@@ -1,4 +1,5 @@
 html {
+    font-family: Helvetica;
     font-size: 16px;
 }
 
@@ -7,8 +8,18 @@ main {
     top: 4rem;
 }
 
+h1 {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h4 {
@@ -22,17 +33,19 @@ header {
     position: fixed;
     width: 100%;
     height: 4rem;
+    z-index: 5;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    z-index: 5;
     align-items: center;
     background-color: white;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-size: 1.75rem;
-}
+/* header .content {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  } */
 
 header .logo {
     height: 2rem;
@@ -40,6 +53,7 @@ header .logo {
 
 header nav ul {
     display: flex;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -55,17 +69,13 @@ nav a {
     display: grid;
     padding: 2rem 1.5rem;
     grid-template: 100% / 60% 40%;
-    grid-column-gap: 1.5rem;
+    grid-column-gap: 3rem;
     background-color: lightgray;
 }
 
 .banner img {
     max-width: 100%;
     grid-column: 1 / span 1;
-}
-
-h2 {
-    font-size: 2.5rem;
 }
 
 .button {
@@ -78,7 +88,13 @@ h2 {
 }
 
 .banner-text {
+    display: flex;
     grid-column: 2 / span 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 18rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* PRACTICE */
@@ -93,15 +109,44 @@ h2 {
 .quote img {
     grid-column: 1 / span 1;
     max-width: 100%;
+    padding-bottom: 2rem;
+}
+
+.practice-text {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    
 }
 
 .sidepanel {
     display: grid;
     grid-template: repeat(3, 1fr) / 35% 65%;
+    align-items: center;
+    justify-items: center;
+}
+
+.sidepanel .orientation {
+    display: flex;
+    grid-row: 1 / span 1;
+}
+
+.sidepanel .campus {
+    display: flex;
+    grid-row: 2 / span 1;
+}
+
+.sidepanel .guestlecture {
+    display: flex;
+    grid-row: 3 / span 1;
+}
+
+.sidepanel .panel {
+    
 }
 
 .sidepanel img {
     max-width: 100%;
+    height: auto;
 }
 
 .sidepanel a {
