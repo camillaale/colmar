@@ -1,3 +1,5 @@
+/* UNIVERSAL STYLES */
+
 html {
     font-family: Helvetica;
     font-size: 16px;
@@ -20,11 +22,24 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 h4 {
-
+    font-size: 1rem;
+    font-weight: bold;
 }
+
+video {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .desktop {
+      display: none;
+    }
+  }
 
 /* HEADER */
 
@@ -78,6 +93,17 @@ nav a {
     grid-column: 1 / span 1;
 }
 
+.banner-text {
+    display: flex;
+    grid-column: 2 / span 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 18rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 .button {
     background-color: darkgrey;
     color: white;
@@ -85,16 +111,6 @@ nav a {
     padding-bottom: 0.5rem;
     text-decoration: none;
     text-align: center;
-}
-
-.banner-text {
-    display: flex;
-    grid-column: 2 / span 1;
-    flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 18rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 
 /* PRACTICE */
@@ -112,44 +128,109 @@ nav a {
     padding-bottom: 2rem;
 }
 
-.practice-text {
+.practice-text p {
     padding-bottom: 2rem;
-    padding-top: 2rem;
-    
 }
+
+.practice-text h3 {
+    text-align: left;
+    padding-bottom: 1.5rem;
+}
+
+/* SIDEPANEL */
 
 .sidepanel {
     display: grid;
     grid-template: repeat(3, 1fr) / 35% 65%;
-    align-items: center;
-    justify-items: center;
+}
+
+.sidepanel .panel {
+    display: flex;
+    border: 1px lightgray solid;
 }
 
 .sidepanel .orientation {
-    display: flex;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 1; 
 }
 
 .sidepanel .campus {
-    display: flex;
     grid-row: 2 / span 1;
 }
 
 .sidepanel .guestlecture {
-    display: flex;
     grid-row: 3 / span 1;
-}
-
-.sidepanel .panel {
-    
+    background-color: rgb(119, 119, 119);
 }
 
 .sidepanel img {
     max-width: 100%;
     height: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidepanel .panel-text {
+    padding-left: 1.5rem;
+    max-width: 25rem;
 }
 
 .sidepanel a {
     color: cornflowerblue;
     text-decoration: none;
+}
+
+/* COURSES */
+
+.courses {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgb(240, 240, 240);
+}
+
+.courses-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    flex-wrap: wrap;
+}
+
+.courses .content {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    max-width: 22rem;
+}
+
+.courses img {
+    max-width: 100%;
+    height: auto;
+}
+
+.courses h4, .courses p {
+    padding: 1rem;
+}
+
+/* THESIS  */
+
+
+
+/* FOOTER  */
+
+footer {
+    display: flex;
+    border-top: 1px solid lightgray;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    justify-content: space-between; 
+}
+
+footer a {
+    padding-left: 1rem;
+    text-decoration: none;
+    color: black;
+    vertical-align: bottom;
 }
