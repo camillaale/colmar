@@ -22,6 +22,7 @@ h1 {
 h2 {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -39,7 +40,7 @@ p {
     font-size: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .desktop {
       display: none;
     }
@@ -57,15 +58,9 @@ header {
     padding-left: 1.5rem;
     align-items: center;
     background-color: white;
+    border-bottom:1px solid rgb(240, 240, 240);
     justify-content: space-between;
 }
-
-/* header .content {
-    display: flex;
-    align-items: center;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  } */
 
 .logo-holder {
     height: 2rem;
@@ -86,54 +81,51 @@ nav a {
 /* BANNER */
 
 .banner {
-    display: grid;
+    display: flex;
     padding: 2rem 1.5rem;
-    grid-template: 100% / 60% 40%;
-    grid-column-gap: 3rem;
     background-color: lightgray;
 }
 
 .banner img {
-    max-width: 100%;
-    grid-column: 1 / span 1;
+    max-width: 60%;
+    margin-right: 2rem;
 }
 
 .banner-text {
     display: flex;
-    grid-column: 2 / span 1;
     flex-direction: column;
-    justify-content: space-evenly;
-    max-width: 18rem;
-    padding-right: 3rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    justify-content: center;
+    max-width: 40%;
+    padding-right: 4rem;
+    line-height: 1.2;
 }
 
 .button {
     background-color: darkgrey;
     color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-decoration: none;
     text-align: center;
+    max-width: 80%;
 }
 
 /* PRACTICE */
 
 .practice {
-    display: grid;
+    display: flex;
     padding: 2rem 1.5rem;
-    grid-template: 100% / 60% 40%;
-    grid-column-gap: 3rem;
+}
+.practice .quote {
+    max-width: 60%;
+    margin-right: 1.5rem;
 }
 
 .quote img {
-    grid-column: 1 / span 1;
     max-width: 100%;
-    padding-bottom: 2rem;
-}
-
-.practice-text p {
+    height: auto;
     padding-bottom: 2rem;
 }
 
@@ -142,11 +134,16 @@ nav a {
     padding-bottom: 1.5rem;
 }
 
-/* SIDEPANEL */
+.practice-text p {
+    padding-bottom: 2rem;
+}
+
+/* PRACTICE SIDEPANEL */
 
 .practice-sidepanel {
-    display: grid;
-    grid-template: repeat(3, 1fr);
+    display: flex;
+    max-width: 40%;
+    flex-direction: column;
 }
 
 .practice-sidepanel .panel {
@@ -155,17 +152,12 @@ nav a {
 }
 
 .practice-sidepanel .orientation {
-    grid-row: 1 / span 1; 
     border-bottom: 1px lightgray solid;
 }
 
-.practice-sidepanel .campus {
-    grid-row: 2 / span 1;
-}
-
 .practice-sidepanel .guestlecture {
-    grid-row: 3 / span 1;
     background-color: rgb(210, 210, 210);
+    min-width: 26.5rem;
 }
 
 .practice-sidepanel img {
@@ -177,19 +169,12 @@ nav a {
 }
 
 .practice-sidepanel .panel-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 1.5rem;
-    padding-top: 1rem;
     padding-right: 2rem;
-    max-width: 65%;
-}
-
-.practice-sidepanel h4 {
-    padding-top: 1.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.practice-sidepanel p {
-    padding-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
 .practice-sidepanel a {
@@ -212,6 +197,7 @@ nav a {
     margin-left: 4.5rem;
     margin-right: 4.5rem;
     flex-wrap: wrap;
+    flex-basis: content;
 }
 
 .courses .content {
@@ -238,44 +224,28 @@ nav a {
 }
 
 .thesis-content {
-    display: grid;
+    display: flex;
     padding: 2rem 1.5rem;
-    grid-template: 100% / 60% 40%;
-    column-gap: 3rem;
 }
 
 .thesis-video {
-    grid-column: 1 / span 1;
-    
+    max-width: 60%;
+    margin-right: 1.5rem;
 }
 
 .thesis-video video {
     max-width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .thesis-video h4 {
     padding-bottom: 1rem;
 }
 
-.thesis-sidepanel {
-    grid-column: 2 / span 1;
-    display: grid;
-    grid-template: repeat(2, 1fr);
-}
+/* THESIS SIDEPANEL */
 
 .thesis-sidepanel .panel {
     display: flex;
-}
-
-.thesis-sidepanel .fisma {
-    grid-row: 1 / span 1;
-    background-color: rgb(210, 210, 210);
-    min-width: 26.5rem;
-}
-
-.thesis-sidepanel .now-then {
-    grid-row: 2 / span 1;
 }
 
 .thesis-sidepanel img {
@@ -284,22 +254,21 @@ nav a {
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
-}  
+} 
 
-.thesis-sidepanel .panel-text {
-    max-width: 65%;
-    padding-left: 1.5rem;
-    padding-top: 1rem;
-    padding-right: 2rem;
-}  
-
-.thesis-sidepanel h4 {
-    padding-top: 3.5rem;
-    padding-bottom: 0.5rem;
+.thesis-sidepanel .fisma {
+    background-color: rgb(210, 210, 210);
+    min-width: 26.5rem;
 }
 
-.thesis-sidepanel p {
-    padding-bottom: 0.5rem;
+.thesis-sidepanel .panel-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    justify-content: center;
+    line-height: 1.6;
 }
 
 /* FOOTER  */
@@ -307,9 +276,7 @@ nav a {
 footer {
     display: flex;
     border-top: 1px solid lightgray;
-    padding-top: 1rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 1.5rem;
     justify-content: space-between; 
 }
 
