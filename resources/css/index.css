@@ -1,3 +1,6 @@
+
+/* font-family: 'Orelega One', cursive; */
+
 /* UNIVERSAL STYLES */
 
 * { 
@@ -5,7 +8,7 @@ box-sizing: border-box;
 }
 
 html {
-    font-family: Helvetica;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
 
@@ -16,28 +19,31 @@ main {
 
 h1 {
     text-transform: uppercase;
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+    font-weight: 300;
 }
 
 h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Orelega One', cursive;
     margin-bottom: 1rem;
 }
 
 h3 {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Orelega One', cursive;
     text-align: center;
 }
 
 h4 {
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 p {
     font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 800px) {
@@ -58,7 +64,7 @@ header {
     padding-left: 1.5rem;
     align-items: center;
     background-color: white;
-    border-bottom:1px solid rgb(240, 240, 240);
+    border-bottom: 1px solid rgb(240, 240, 240);
     justify-content: space-between;
 }
 
@@ -149,6 +155,7 @@ nav a {
 .practice-sidepanel .panel {
     display: flex;
     border-left: 1px lightgray solid;
+    min-width: 26.5rem;
 }
 
 .practice-sidepanel .orientation {
@@ -157,7 +164,6 @@ nav a {
 
 .practice-sidepanel .guestlecture {
     background-color: rgb(210, 210, 210);
-    min-width: 26.5rem;
 }
 
 .practice-sidepanel img {
