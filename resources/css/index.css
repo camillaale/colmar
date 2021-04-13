@@ -1,5 +1,9 @@
 /* UNIVERSAL STYLES */
 
+* { 
+box-sizing: border-box;
+}
+
 html {
     font-family: Helvetica;
     font-size: 16px;
@@ -27,12 +31,12 @@ h3 {
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-video {
-    width: 100%;
+p {
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -53,6 +57,7 @@ header {
     padding-left: 1.5rem;
     align-items: center;
     background-color: white;
+    justify-content: space-between;
 }
 
 /* header .content {
@@ -62,13 +67,13 @@ header {
     padding-left: 1.5rem;
   } */
 
-header .logo {
+.logo-holder {
     height: 2rem;
+    display: flex;
 }
 
 header nav ul {
     display: flex;
-    justify-content: flex-end;
 }
 
 nav a {
@@ -139,43 +144,55 @@ nav a {
 
 /* SIDEPANEL */
 
-.sidepanel {
+.practice-sidepanel {
     display: grid;
-    grid-template: repeat(3, 1fr) / 35% 65%;
+    grid-template: repeat(3, 1fr);
 }
 
-.sidepanel .panel {
+.practice-sidepanel .panel {
     display: flex;
-    border: 1px lightgray solid;
+    border-left: 1px lightgray solid;
 }
 
-.sidepanel .orientation {
+.practice-sidepanel .orientation {
     grid-row: 1 / span 1; 
+    border-bottom: 1px lightgray solid;
 }
 
-.sidepanel .campus {
+.practice-sidepanel .campus {
     grid-row: 2 / span 1;
 }
 
-.sidepanel .guestlecture {
+.practice-sidepanel .guestlecture {
     grid-row: 3 / span 1;
-    background-color: rgb(119, 119, 119);
+    background-color: rgb(210, 210, 210);
 }
 
-.sidepanel img {
-    max-width: 100%;
+.practice-sidepanel img {
+    max-width: 35%;
     height: auto;
-    padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
 }
 
-.sidepanel .panel-text {
+.practice-sidepanel .panel-text {
     padding-left: 1.5rem;
-    max-width: 25rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    max-width: 65%;
 }
 
-.sidepanel a {
+.practice-sidepanel h4 {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.practice-sidepanel p {
+    padding-bottom: 0.5rem;
+}
+
+.practice-sidepanel a {
     color: cornflowerblue;
     text-decoration: none;
 }
@@ -191,9 +208,9 @@ nav a {
 .courses-content {
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
+    margin-top: 2rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
     flex-wrap: wrap;
 }
 
@@ -210,12 +227,80 @@ nav a {
 }
 
 .courses h4, .courses p {
-    padding: 1rem;
+    margin: 1rem;
 }
 
 /* THESIS  */
 
+.thesis {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
+.thesis-content {
+    display: grid;
+    padding: 2rem 1.5rem;
+    grid-template: 100% / 60% 40%;
+    column-gap: 3rem;
+}
+
+.thesis-video {
+    grid-column: 1 / span 1;
+    
+}
+
+.thesis-video video {
+    max-width: 100%;
+    padding-bottom: 2rem;
+}
+
+.thesis-video h4 {
+    padding-bottom: 1rem;
+}
+
+.thesis-sidepanel {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template: repeat(2, 1fr);
+}
+
+.thesis-sidepanel .panel {
+    display: flex;
+}
+
+.thesis-sidepanel .fisma {
+    grid-row: 1 / span 1;
+    background-color: rgb(210, 210, 210);
+    min-width: 26.5rem;
+}
+
+.thesis-sidepanel .now-then {
+    grid-row: 2 / span 1;
+}
+
+.thesis-sidepanel img {
+    max-width: 35%;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}  
+
+.thesis-sidepanel .panel-text {
+    max-width: 65%;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+}  
+
+.thesis-sidepanel h4 {
+    padding-top: 3.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.thesis-sidepanel p {
+    padding-bottom: 0.5rem;
+}
 
 /* FOOTER  */
 
