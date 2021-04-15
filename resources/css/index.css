@@ -244,6 +244,7 @@ nav a {
 
 @media only screen and (max-width: 850px) {
     .practice-sidepanel {
+        display: flex;
         max-width: 100%;
     }
 
